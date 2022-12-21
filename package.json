@@ -1,0 +1,25 @@
+{
+  "name": "nextjs-extra",
+  "version": "0.0.0",
+  "description": "Extra functionality for nextjs to improve the development experience, that adds features like: CMS capabilities, ABtesting, progresive delivery, abstracting (and mocking) data sources, automatic storybook-ish playground, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextjs-extra/nextjs-extra.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "web",
+    "development"
+  ],
+  "author": "Antonio Fernández Porrúa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nextjs-extra/nextjs-extra/issues"
+  },
+  "homepage": "https://github.com/nextjs-extra/nextjs-extra#readme"
+}
