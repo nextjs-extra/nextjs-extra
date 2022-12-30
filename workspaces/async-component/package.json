@@ -1,0 +1,29 @@
+{
+  "name": "@nextjs-extra/async-component",
+  "version": "1.0.0",
+  "description": "Helps you create dialogs, modals, popups, menus, and other short life elements for which the creator component might be awaiting for a return value",
+  "main": "AsyncComponent.tsx",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --fix",
+    "pretty": "prettier --write .",
+    "prepretty": "npm run lint"
+  },
+  "peerDependencies": {
+    "react": "18.x"
+  },
+  "author": "Antonio Fernández Porrúa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nextjs-extra/nextjs-extra/issues"
+  },
+  "homepage": "https://github.com/nextjs-extra/nextjs-extra#readme",
+  "keywords": [
+    "nextjs",
+    "react",
+    "nextjs-extra",
+    "async",
+    "component",
+    "modal"
+  ]
+}

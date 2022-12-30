@@ -1,0 +1,7 @@
+coverage
+test-results
+playwright-report
+.cache
+test-report.html
+node_modules
+playground

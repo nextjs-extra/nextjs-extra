@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#__next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#__next > main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Prompt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff5;
+  backdrop-filter: blur(2px);
+}
+
+.Prompt > form {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+}
+.Toast {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border: 1px solid #000;
+  width: 100%;
+  text-align: center;
+}
