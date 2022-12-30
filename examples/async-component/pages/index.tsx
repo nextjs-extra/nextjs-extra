@@ -21,7 +21,7 @@ export default function Home() {
         {
           message: `Name not set`,
           style: { background: "orange", color: "white" },
-          timeout: 9000
+          timeout: 9000,
         },
         "footer"
       );

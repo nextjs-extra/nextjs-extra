@@ -36,8 +36,8 @@ const response = await asyncit({
 
 ## Example
 
-* [code](https://github.com/nextjs-extra/nextjs-extra/tree/main/examples/async-component)
-* [demo](https://stackblitz.com/github/nextjs-extra/nextjs-extra/tree/main/examples/async-component)
+- [code](https://github.com/nextjs-extra/nextjs-extra/tree/main/examples/async-component)
+- [demo](https://stackblitz.com/github/nextjs-extra/nextjs-extra/tree/main/examples/async-component)
 
 ## Advanced Usage
 
