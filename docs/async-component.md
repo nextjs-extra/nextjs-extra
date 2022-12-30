@@ -1,4 +1,4 @@
-# `next-js-extra/async-component`
+# ` @next-js-extra/async-component`
 
 It mounts a component and returns a promise that resolves when the component
 closes.
@@ -14,7 +14,7 @@ of using state and conditional rendering.
 ## Installation
 
 ```bash
-npm install next-js-extra/async-component
+npm install @nextjs-extra/async-component
 ```
 
 ## Basic Usage

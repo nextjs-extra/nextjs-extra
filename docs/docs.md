@@ -1,6 +1,6 @@
-# `nextjs-extra`'s Documentation
+# nextjs-extra
 
-`nextjs-extra` is a collection of utilities for Next.js.
+nextjs-extra is a collection of utilities for Next.js.
 
 They have been written originally for different projects, and now they are being published together with proper testing and documentation.
 
