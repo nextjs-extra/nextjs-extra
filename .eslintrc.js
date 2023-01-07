@@ -23,12 +23,7 @@ module.exports = {
     "react/prop-types": 0,
     "no-constant-condition": ["error", { checkLoops: false }],
   },
-  ignorePatterns: [
-    "**/ext/**/*",
-    "**/dist/**/*",
-    "/examples/infinite",
-    "/create-orgasmo/empty",
-  ],
+  ignorePatterns: ["**/ext/**/*", "**/dist/**/*"],
   settings: {
     react: {
       version: "detect",

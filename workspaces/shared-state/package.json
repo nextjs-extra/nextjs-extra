@@ -1,0 +1,32 @@
+{
+  "name": "@nextjs-extra/shared-state",
+  "version": "1.0.0",
+  "description": "A shared state that uses URL-ish paths to access the values.",
+  "main": "dist/react.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "prebuild": "npm run lint ; rm -rf dist",
+    "build": "tsc",
+    "lint": "eslint . --fix",
+    "pretty": "prettier --write .",
+    "prettylint": "npm run lint && npm run pretty",
+    "dev": "nodemon --exec \"npm run build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextjs-extra/nextjs-extra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nextjs-extra/nextjs-extra/issues"
+  },
+  "homepage": "https://github.com/nextjs-extra/nextjs-extra#readme",
+  "files": [
+    "dist/"
+  ],
+  "exports": {
+    ".": "./dist/react.js"
+  }
+}

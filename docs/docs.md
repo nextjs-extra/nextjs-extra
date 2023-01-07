@@ -15,22 +15,26 @@ closes.
 
 It can be used for confirmation dialogs, prompt dialogs, modals, popups, menus, toasts, etc.
 
-## Work in progress
-
-This is module that will be published next.
-
-### Dynamic State
+### [Shared State](shared-state.md)
 
 A shared state that uses URL-ish paths to access the values.
 
 It can be used for sharing a state dynamically name-spaced, so following some API-like naming convention, any component can use a few properties to generate the URLs it needs to read and write any related shared value.
 
+## Work in progress
+
+This is module that will be published next.
+
+### build style
+
+A build tool that automatically append all your scss files and compiles one css file.
+
 ## Backlog
 
 These are the modules that are planned to be published in the future. It's not a final list. Priorities may change, some new modules may be added, and some modules may be removed.
 
-- slider
 - build-style
+- slider
 - dynamic components
 - auto-stories
 - build-driver

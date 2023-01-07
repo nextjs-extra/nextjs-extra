@@ -1,4 +1,4 @@
-# ` @next-js-extra/async-component`
+# `@next-js-extra/async-component`
 
 It mounts a component and returns a promise that resolves when the component
 closes.
