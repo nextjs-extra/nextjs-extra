@@ -30,7 +30,9 @@
     "workspaces/async-component",
     "examples/async-component",
     "workspaces/shared-state",
-    "examples/shared-state"
+    "examples/shared-state",
+    "workspaces/build-style",
+    "examples/build-style"
   ],
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

@@ -1,0 +1,5 @@
+body {
+  background: var(--color-background, #fff);
+  color: var(--color-text, #000);
+  margin-top: auto;
+}

@@ -1,0 +1,14 @@
+/* start file: styles/main.global.css */
+body {
+  background: var(--color-background, #fff);
+  color: var(--color-text, #000);
+  margin-top: auto;
+} /* end file: styles/main.global.css */
+
+/* start file: styles/some-component.component.scss */
+some-component {
+  h1 {
+    color: green;
+  }
+}
+/* end file: styles/some-component.component.scss */
