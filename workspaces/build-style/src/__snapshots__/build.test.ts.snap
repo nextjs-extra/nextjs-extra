@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`build builds 1`] = `
+"/* start file: main.global.css */
+body {
+  background: var(--color-background, #fff);
+  color: var(--color-text, #000);
+  margin-top: auto;
+}
+/* end file: main.global.css */
+
+/* start file: some-component.component.scss */
+some-component {
+h1 {
+  color: green;
+}
+}
+/* end file: some-component.component.scss */
+
+"
+`;
+
+exports[`build builds 2`] = `
+":root {
+  --color-background: #ff0000;
+  /* --color-text: ;  /* undefined */
+  --secondary-color: #00ff00; /* unused */
+}"
+`;
