@@ -1,6 +1,6 @@
 {
   "name": "@nextjs-extra/build-style",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Aggregates and compiles css and sass files so you don't have to care about linking the files",
   "main": "dist/index.js",
   "scripts": {
