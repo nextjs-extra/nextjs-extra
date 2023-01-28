@@ -33,6 +33,12 @@ This is module that will be published next.
 
 This help you to load components and use them dynamically, meaning you don't have to hard-code the components you want to use.
 
+[x] refactored
+[x] tested
+[x] published
+[ ] examples
+[ ] documented
+
 ## Backlog
 
 These are the modules that are planned to be published in the future. It's not a final list. Priorities may change, some new modules may be added, and some modules may be removed.
