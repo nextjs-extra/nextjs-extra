@@ -1,3 +1,4 @@
 - Modules
   - [Async Component](async-component.md)
+  - [Build Style](build-style.md)
 - [Join us](Join-us.md)
