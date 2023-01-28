@@ -1,5 +1,5 @@
-export declare function watcher({ globPath, cwd, outStyle, outVars, variables }: {
-    globPath: any;
+export declare function watcher({ globPattern, cwd, outStyle, outVars, variables }: {
+    globPattern: any;
     cwd: any;
     outStyle: any;
     outVars: any;

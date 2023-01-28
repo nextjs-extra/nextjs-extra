@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.waitAndBuildFactory = void 0;
 const build_1 = require("./build");
 const waitAndCall_1 = require("./waitAndCall");
-function waitAndBuildFactory({ globPath = "**/*.{global,component}.{css,scss}", cwd = process.cwd(), outStyle = "style.scss", outVars = "vars.css", variables = {}, }) {
+function waitAndBuildFactory({ globPattern = "**/*.{global,component}.{css,scss}", cwd = process.cwd(), outStyle = "style.scss", outVars = "vars.css", variables = {}, }) {
     const fn = () => (0, build_1.build)({
-        globPath,
+        globPattern,
         cwd,
         outStyle,
         outVars,

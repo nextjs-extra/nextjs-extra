@@ -1,5 +1,5 @@
-export declare function build({ globPath, cwd, outStyle, outVars, variables }: {
-    globPath: any;
+export declare function build({ globPattern, cwd, outStyle, outVars, variables, }: {
+    globPattern: any;
     cwd: any;
     outStyle: any;
     outVars: any;

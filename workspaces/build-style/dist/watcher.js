@@ -3,16 +3,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.watcher = void 0;
 const chokidar = require("chokidar");
 const waitAndBuild_1 = require("./waitAndBuild");
-function watcher({ globPath, cwd, outStyle, outVars, variables }) {
-    console.info("Watching", globPath, "to generate", outStyle, "and", outVars);
+function watcher({ globPattern, cwd, outStyle, outVars, variables }) {
+    console.info("Watching", globPattern, "to generate", outStyle, "and", outVars);
     const waitAndBuild = (0, waitAndBuild_1.waitAndBuildFactory)({
-        globPath,
+        globPattern,
         cwd,
         outStyle,
         outVars,
         variables,
     });
-    const watcher = chokidar.watch(globPath, {
+    const watcher = chokidar.watch(globPattern, {
         cwd,
         ignoreInitial: true,
         awaitWriteFinish: true,

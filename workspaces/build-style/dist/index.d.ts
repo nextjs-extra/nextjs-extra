@@ -1,5 +1,5 @@
 type BuildStyleOptions = {
-    globPath?: string;
+    globPattern?: string;
     cwd?: string;
     outStyle?: string;
     outVars?: string;

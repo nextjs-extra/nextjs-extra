@@ -4,7 +4,7 @@ exports.buildStyle = void 0;
 const build_1 = require("./build");
 const watcher_1 = require("./watcher");
 const defaultOptions = {
-    globPath: "**/*.{global,component}.{css,scss}",
+    globPattern: "**/*.{global,component}.{css,scss}",
     cwd: process.cwd(),
     outStyle: "style.scss",
     outVars: "vars.css",

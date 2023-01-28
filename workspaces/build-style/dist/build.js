@@ -8,14 +8,13 @@ const util_1 = require("util");
 const fs_extra_1 = require("fs-extra");
 const globSync = (0, util_1.promisify)(glob);
 const getNameRegex = /(?<name>[^/]+)\.component\.s?css$/;
-async function build({ globPath, cwd, outStyle, outVars, variables }) {
-    const files = await globSync(globPath, {
+async function build({ globPattern, cwd, outStyle, outVars, variables, }) {
+    const files = await globSync(globPattern, {
         cwd,
     });
     let scss = "";
     const vars = new Set();
     for (const file of files) {
-        console.log("file", file);
         const content = await (0, promises_1.readFile)((0, path_1.resolve)(cwd, file), "utf-8");
         const name = getNameRegex.exec(file)?.groups?.name;
         scss += `/* start file: ${file} */\n`;
