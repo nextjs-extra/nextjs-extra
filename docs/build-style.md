@@ -20,13 +20,19 @@ You will get a `./style.scss` you can import from `_app.js`, and for your conven
 npm install @nextjs-extra/build-style
 ```
 
+if you want to use sass, you need to install it too:
+
+```bash
+npm install sass
+```
+
 ## Basic Usage
 
 In `next.config.js`:
 
 ```js
 // next.config.js
-const buildStyle = require("@nextjs-extra/build-style");
+const { buildStyle } = require("@nextjs-extra/build-style");
 
 module.exports = async function () {
   await buildStyle();
@@ -37,7 +43,7 @@ module.exports = async function () {
 };
 ```
 
-In `_app.js`:
+In `_app.js` or `app/layout.js`:
 
 ```js
 import "../styles.scss";
@@ -104,7 +110,7 @@ I recommend to use `watch: process.env.NODE_ENV === "development"`.
 
 ```js
 // next.config.js
-const buildStyle = require("@nextjs-extra/build-style");
+const { buildStyle } = require("@nextjs-extra/build-style");
 const { join } = require("path");
 
 module.exports = async function () {
