@@ -23,8 +23,6 @@ export async function build({
   const vars = new Set<string>();
 
   for (const file of files) {
-    console.log("file", file);
-
     const content = await readFile(resolve(cwd, file), "utf-8");
 
     const name = getNameRegex.exec(file)?.groups?.name;
