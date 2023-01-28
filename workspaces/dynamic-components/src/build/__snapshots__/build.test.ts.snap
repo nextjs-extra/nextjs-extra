@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`build builds 1`] = `
+"import dynamic from "next/dynamic";
+  
+const Components = {
+  eslint: dynamic(() => import("eslint"), { suspense: true, loading: undefined }),
+  reactーjsx-runtime: dynamic(() => import("react/jsx-runtime"), { suspense: true, loading: undefined }),
+  SomeOtherComponent: dynamic(() => import("./foo/SomeOtherComponent.dynamic.jsx"), { suspense: true, loading: undefined }),
+};
+  
+export default Components;
+"
+`;

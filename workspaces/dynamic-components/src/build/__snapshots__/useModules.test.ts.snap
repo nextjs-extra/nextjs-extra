@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useModules 1`] = `
+"
+  eslint: dynamic(() => import("eslint"), { suspense: true, loading: undefined }),
+  reactーjsx-runtime: dynamic(() => import("react/jsx-runtime"), { suspense: true, loading: undefined }),"
+`;

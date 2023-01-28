@@ -32,7 +32,8 @@
     "workspaces/shared-state",
     "examples/shared-state",
     "workspaces/build-style",
-    "examples/build-style"
+    "examples/build-style",
+    "workspaces/dynamic-components"
   ],
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

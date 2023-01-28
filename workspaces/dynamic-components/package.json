@@ -1,0 +1,36 @@
+{
+  "name": "dynamic-components",
+  "version": "1.0.0",
+  "description": "Allows you to use components dynamically",
+  "main": "dist/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "prebuild": "npm run lint ; rm -rf dist",
+    "build": "tsc",
+    "lint": "eslint . --fix",
+    "pretty": "prettier --write .",
+    "prettylint": "npm run lint && npm run pretty",
+    "dev": "nodemon --exec \"npm run build \" --watch src --ext ts,tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextjs-extra/nextjs-extra.git"
+  },
+  "author": "Antonio Fernández Porrúa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nextjs-extra/nextjs-extra/issues"
+  },
+  "homepage": "https://github.com/nextjs-extra/nextjs-extra#readme",
+  "files": [
+    "dist/"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./build": "./dist/build/index.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3"
+  }
+}

@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useImports 1`] = `
+"
+  ComponentName: dynamic(() => import("./path/ComponentName.dynamic.jsx"), { suspense: true, loading: undefined }),"
+`;
