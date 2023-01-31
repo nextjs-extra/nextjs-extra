@@ -1,5 +1,9 @@
-export default function DComponent({ type, props, Components }: {
-    type: any;
-    props: any;
-    Components: any;
-}): any;
+type BuildStyleOptions = {
+    globPattern?: string;
+    cwd?: string;
+    out?: string;
+    modules?: Array<string>;
+    watch?: boolean;
+};
+export declare function buildDynamiComponents(options?: BuildStyleOptions): Promise<void>;
+export {};

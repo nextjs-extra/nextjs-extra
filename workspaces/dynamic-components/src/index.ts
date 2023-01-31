@@ -1,5 +1,5 @@
-import { build } from "./build";
-import { watcher } from "./watcher";
+import { build } from "./build/build";
+import { watcher } from "./build/watcher";
 
 type BuildStyleOptions = {
   globPattern?: string;
@@ -23,7 +23,7 @@ const defaultOptions: BuildStyleOptions = {
   modules: [],
 };
 
-export async function buildDynamicomponents(
+export async function buildDynamiComponents(
   options: BuildStyleOptions = defaultOptions
 ) {
   const watch = Boolean(options.watch);

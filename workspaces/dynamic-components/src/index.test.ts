@@ -1,20 +1,20 @@
-import { build } from "./build";
-import { watcher } from "./watcher";
-import { buildDynamicomponents } from "./index";
+import { build } from "./build/build";
+import { watcher } from "./build/watcher";
+import { buildDynamiComponents } from "./index";
 
-jest.mock("./build", () => ({
+jest.mock("./build/build", () => ({
   __esModule: true,
   build: jest.fn(),
 }));
 
-jest.mock("./watcher", () => ({
+jest.mock("./build/watcher", () => ({
   __esModule: true,
   watcher: jest.fn(),
 }));
 
 describe("build-style", () => {
   it("calls build with the default parameters", async () => {
-    await buildDynamicomponents();
+    await buildDynamiComponents();
     expect(build).toBeCalledWith({
       globPattern: "**/*.dynamic.{jsx,tsx,js,ts,cjs,mjs}",
       cwd: process.cwd(),
@@ -23,7 +23,7 @@ describe("build-style", () => {
     });
   });
   it("calls watcher if watch is true", async () => {
-    await buildDynamicomponents({ watch: true });
+    await buildDynamiComponents({ watch: true });
     expect(watcher).toBeCalled();
   });
 });

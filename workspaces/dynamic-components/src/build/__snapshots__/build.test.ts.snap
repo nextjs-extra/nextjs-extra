@@ -2,13 +2,16 @@
 
 exports[`build builds 1`] = `
 "import dynamic from "next/dynamic";
-  
-const Components = {
-  eslint: dynamic(() => import("eslint"), { suspense: true, loading: undefined }),
-  reactーjsx-runtime: dynamic(() => import("react/jsx-runtime"), { suspense: true, loading: undefined }),
-  SomeOtherComponent: dynamic(() => import("./foo/SomeOtherComponent.dynamic.jsx"), { suspense: true, loading: undefined }),
+import { DC } from "@nextjs-extra/dynamic-components/DC";
+
+export const Components = {
+  eslint: dynamic(() => import("eslint"), { suspense: true }),
+  reactーjsx-runtime: dynamic(() => import("react/jsx-runtime"), { suspense: true }),
+  SomeOtherComponent: dynamic(() => import("./foo/SomeOtherComponent.dynamic.jsx"), { suspense: true }),
 };
-  
-export default Components;
+
+export function DComponent({ type, props, children = null }) {
+  return <DC type={type} Components={Components} props={props}>{children}</DC>;
+}
 "
 `;

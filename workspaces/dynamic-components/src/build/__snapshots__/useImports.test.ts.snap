@@ -2,5 +2,5 @@
 
 exports[`useImports 1`] = `
 "
-  ComponentName: dynamic(() => import("./path/ComponentName.dynamic.jsx"), { suspense: true, loading: undefined }),"
+  ComponentName: dynamic(() => import("./path/ComponentName.dynamic.jsx"), { suspense: true }),"
 `;

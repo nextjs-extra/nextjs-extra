@@ -20,7 +20,7 @@ export function useModules(modules) {
     }
     string = `${string}\n  ${getName(
       path
-    )}: dynamic(() => import("${path}"), { suspense: true, loading: undefined }),`;
+    )}: dynamic(() => import("${path}"), { suspense: true }),`;
   }
 
   return string;

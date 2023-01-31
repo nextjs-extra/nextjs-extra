@@ -19,7 +19,7 @@ function useModules(modules) {
         if (!isAModule(path)) {
             continue;
         }
-        string = `${string}\n  ${getName(path)}: dynamic(() => import("${path}"), { suspense: true, loading: undefined }),`;
+        string = `${string}\n  ${getName(path)}: dynamic(() => import("${path}"), { suspense: true }),`;
     }
     return string;
 }

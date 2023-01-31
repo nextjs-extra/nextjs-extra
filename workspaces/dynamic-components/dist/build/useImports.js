@@ -11,7 +11,7 @@ function useImports(files) {
         const parse = parsePath.exec(path);
         if (!parse?.groups?.filename)
             continue;
-        string = `${string}\n  ${parse.groups.filename}: dynamic(() => import("./${path}"), { suspense: true, loading: undefined }),`;
+        string = `${string}\n  ${parse.groups.filename}: dynamic(() => import("./${path}"), { suspense: true }),`;
     }
     return string;
 }

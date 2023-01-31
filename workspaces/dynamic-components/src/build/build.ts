@@ -16,11 +16,14 @@ export async function build({ globPattern, cwd, out, modules }) {
     resolve(cwd, out),
     `\
 import dynamic from "next/dynamic";
-  
-const Components = {${useModules(modules)}${useImports(files)}
+import { DC } from "@nextjs-extra/dynamic-components/DC";
+
+export const Components = {${useModules(modules)}${useImports(files)}
 };
-  
-export default Components;
+
+export function DComponent({ type, props, children = null }) {
+  return <DC type={type} Components={Components} props={props}>{children}</DC>;
+}
 `
   );
 }

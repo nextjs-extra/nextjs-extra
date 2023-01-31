@@ -1,6 +1,6 @@
 {
   "name": "@nextjs-extra/dynamic-components",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Allows you to use components dynamically",
   "main": "dist/index.js",
   "devDependencies": {},
@@ -28,7 +28,7 @@
   ],
   "exports": {
     ".": "./dist/index.js",
-    "./build": "./dist/build/index.js"
+    "./DC": "./dist/DC.js"
   },
   "dependencies": {
     "chokidar": "^3.5.3"

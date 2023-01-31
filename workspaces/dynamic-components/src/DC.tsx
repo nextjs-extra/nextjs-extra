@@ -1,6 +1,6 @@
 import { Suspense, createElement } from "react";
 
-function expandJSX(content, Components) {
+function expandJSX(content, Components): React.ReactNode {
   if (typeof content === "string") {
     return content;
   }
@@ -19,7 +19,7 @@ function expandJSX(content, Components) {
         if (typeof item === "string") {
           return item;
         }
-        return <DComponent key={i} {...item} Components={Components} />;
+        return <DC key={i} {...item} Components={Components} />;
       })}
     </>
   );
@@ -39,11 +39,21 @@ function expandCreate(content, Components) {
     if (typeof item === "string") {
       return item;
     }
-    return createElement(DComponent, { ...item, Components });
+    return createElement(DC, { ...item, Components });
   });
 }
 
-export default function DComponent({ type, props, Components }) {
+export function DC({
+  type,
+  props = {},
+  Components,
+  children = null,
+}: {
+  type: string;
+  props?: Record<string, any>;
+  Components: Record<string, React.ComponentType>;
+  children?: React.ReactNode;
+}) {
   if (!type) {
     if (props) {
       console.error("Mising type");
@@ -53,6 +63,7 @@ export default function DComponent({ type, props, Components }) {
     }
     return null;
   }
+
   const Component = Components[type];
 
   if (Component) {
@@ -61,7 +72,15 @@ export default function DComponent({ type, props, Components }) {
 
       return (
         <Suspense fallback={null}>
-          <Component {...newProps}>{expandJSX(content, Components)}</Component>
+          {
+            // Type '{ children: ReactNode[]; }' has no properties in common with type 'IntrinsicAttributes'.ts(2559)
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            /* @ts-ignore  */
+          }
+          <Component {...newProps}>
+            {children}
+            {expandJSX(content, Components)}
+          </Component>
         </Suspense>
       );
     } else {

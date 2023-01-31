@@ -1,75 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("react/jsx-runtime");
-const react_1 = require("react");
-function expandJSX(content, Components) {
-    if (typeof content === "string") {
-        return content;
+exports.buildDynamiComponents = void 0;
+const build_1 = require("./build/build");
+const watcher_1 = require("./build/watcher");
+const defaultOptions = {
+    globPattern: "**/*.dynamic.{jsx,tsx,js,ts,cjs,mjs}",
+    cwd: process.cwd(),
+    out: "Components.jsx",
+    modules: [],
+};
+async function buildDynamiComponents(options = defaultOptions) {
+    const watch = Boolean(options.watch);
+    delete options.watch;
+    const buildOptions = Object.assign({}, defaultOptions, options);
+    await (0, build_1.build)(buildOptions);
+    if (!watch) {
+        return;
     }
-    if (!content) {
-        return null;
-    }
-    if (!Array.isArray(content)) {
-        return expandJSX([content], Components);
-    }
-    return ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: content.map((item, i) => {
-            if (item == null) {
-                return null;
-            }
-            if (typeof item === "string") {
-                return item;
-            }
-            return (0, jsx_runtime_1.jsx)(DComponent, { ...item, Components: Components }, i);
-        }) }));
+    (0, watcher_1.watcher)(buildOptions);
 }
-function expandCreate(content, Components) {
-    if (typeof content === "string") {
-        return [content];
-    }
-    if (!Array.isArray(content)) {
-        return expandCreate([content], Components);
-    }
-    return content.map((item) => {
-        if (item == null) {
-            return null;
-        }
-        if (typeof item === "string") {
-            return item;
-        }
-        return (0, react_1.createElement)(DComponent, { ...item, Components });
-    });
-}
-function DComponent({ type, props, Components }) {
-    if (!type) {
-        if (props) {
-            console.error("Mising type");
-            console.debug({
-                props,
-            });
-        }
-        return null;
-    }
-    const Component = Components[type];
-    if (Component) {
-        if (props?.content) {
-            const { content, ...newProps } = props;
-            return ((0, jsx_runtime_1.jsx)(react_1.Suspense, { fallback: null, children: (0, jsx_runtime_1.jsx)(Component, { ...newProps, children: expandJSX(content, Components) }) }));
-        }
-        else {
-            return ((0, jsx_runtime_1.jsx)(react_1.Suspense, { fallback: null, children: (0, jsx_runtime_1.jsx)(Component, { ...props }) }));
-        }
-    }
-    if (type.match(/^[a-z]/)) {
-        if (props?.content) {
-            const { content, ...newProps } = props;
-            const children = expandCreate(content, Components);
-            return (0, react_1.createElement)(type, newProps, ...children);
-        }
-        else {
-            return (0, react_1.createElement)(type, props);
-        }
-    }
-    return (0, jsx_runtime_1.jsx)("div", { "data-component-name": type });
-}
-exports.default = DComponent;
+exports.buildDynamiComponents = buildDynamiComponents;
 //# sourceMappingURL=index.js.map

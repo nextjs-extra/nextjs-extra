@@ -15,27 +15,31 @@ closes.
 
 It can be used for confirmation dialogs, prompt dialogs, modals, popups, menus, toasts, etc.
 
+### [Build Style](build-style.md)
+
+A build tool that helps you write modularized [s]CSS and help you deal with CSS variables.
+
+### [Dynamic Components](dynamic-components.md)
+
+If you need to go beyond the usual conditional rendering, you can use this module that gives you an abstract component, capable of rendering any other component or html element, based on the props you pass to it.
 ### [Shared State](shared-state.md)
 
 A shared state that uses URL-ish paths to access the values.
 
 It can be used for sharing a state dynamically name-spaced, so following some API-like naming convention, any component can use a few properties to generate the URLs it needs to read and write any related shared value.
 
-### [Build Style](build-style.md)
-
-A build tool that helps you write modularized [s]CSS and help you deal with CSS variables.
 
 ## Work in progress
 
 This is module that will be published next.
 
-### Dynamic components
+### Build Driver
 
-This help you to load components and use them dynamically, meaning you don't have to hard-code the components you want to use.
+This help you to create decoupled abstraction layers so you can work with different up-stream and down stream providers, in a way that makes it easier for you to choose different providers for different environments and scenarios.
 
-[x] refactored
-[x] tested
-[x] published
+[ ] refactored
+[ ] tested
+[ ] published
 [ ] examples
 [ ] documented
 
@@ -45,7 +49,6 @@ These are the modules that are planned to be published in the future. It's not a
 
 - slider
 - auto-stories
-- build-driver
 - build-middleware
 - build-config
 - dynamic-API
